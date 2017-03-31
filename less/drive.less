@@ -45,14 +45,18 @@ html,body,#drive{
             li{
                 -webkit-flex:1;
                 flex:1;
-                text-align:center;
-                line-height:.7rem;
+                height:1.55rem;
+                position:relative;
                 a{
-                    display:inline-block;
-                    padding:.1rem .3rem;
-                    font-size:.6rem;
-                    margin-top:.36rem;
-                    line-height:.8rem;
+                    width:80%;
+                    height:80%;
+                    position:absolute;
+                    left:50%;
+                    top:50%;
+                    transform:translate(-50%, -50%);
+                    text-align:center;
+                    line-height:1.3rem;
+                    font-size:.66rem;
                 }
                 .active{
                     border:1px solid #c20c09;
