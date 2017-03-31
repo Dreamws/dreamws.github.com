@@ -21,4 +21,23 @@ var rem = 20;
         doc.documentElement.style.fontSize = rem+'px';
     },false);
 })(window,document);*/
+function domReady(fn){
+    if(document.addEventListener){
+        //IE 9+ chrome FF
+        document.addEventListener('DOMContentLoaded',function(){
+            fn && fn();
+        },false);
+    }else{ //IE8
+        /*document.onreadystatechange=function(){
+         if(document.readyState=='complete'){
+         fn && fn();
+         }
+         };*/
+        document.attachEvent('onreadystatechange',function(){
+            if(document.readyState=='complete'){
+                fn && fn();
+            }
+        });
+    }
+}
 

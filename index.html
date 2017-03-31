@@ -6,7 +6,19 @@
     <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/drive.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <script src="js/remTabDevice.js"></script>
+    <script src="js/swiper-3.4.1.min.js"></script>
+    <script>
+        domReady(function(){
+            var mySwiper=new Swiper('.swiper-container',{
+                pagination:'.swiper-pagination',
+                loop:true,
+                autoplay:2000
+
+            });
+        })
+    </script>
 </head>
 <body>
 <div id="drive">
@@ -24,26 +36,29 @@
         </ul>
     </div>
     <div id="content">
-        <div class="banner">
-            <ul class="banner clearfix">
-                <li>
-                    <img src="img/1.png" alt="">
-                    <div><h4>如此逆天的Android平板你知道吗？</h4></div>
+        <div class="banner swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="img/1.png" alt="">
+                        <div><h4>如此逆天的Android平板你知道吗？</h4></div>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/1.png" alt="">
-                    <div><h4>如此逆天的Android平板你知道吗？</h4></div>
+                <li class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="img/1.png" alt="">
+                        <div><h4>如此逆天的Android平板你知道吗？</h4></div>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/1.png" alt="">
-                    <div><h4>如此逆天的Android平板你知道吗？</h4></div>
+                <li class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="img/1.png" alt="">
+                        <div><h4>如此逆天的Android平板你知道吗？</h4></div>
+                    </a>
                 </li>
             </ul>
-            <ol class="clearfix">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-            </ol>
+            <div class="btn swiper-pagination">
+            </div>
         </div>
         <ul class="main">
             <li class="list">
