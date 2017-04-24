@@ -1,31 +1,253 @@
 <!DOCTYPE html>
-<html ng-app="index">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>han sheng</title>
-    <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/drive.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <script src="js/angular.js"></script>
-    <script src="js/remTabDevice.js"></script>
-    <script src="js/swiper-3.4.1.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controller.js"></script>
-    <script src="js/directive.js"></script>
+    <meta name="keywords" content="web前端，web前端个人简历，前端开发" />
+    <meta name="description" content="胡大双的web前端工程师个人简历">
+    <title>王瀚生的个人简历</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
 </head>
 <body>
-<div id="drive">
-    <!--头部-->
-    <ng-header></ng-header>
-    <div id="content" ng-controller="drive">
-        <!--banner-->
-        <ng-banner></ng-banner>
-        <!--mian-->
-        <ng-main></ng-main>
-        <!--footer-->
-        <ng-footer></ng-footer>
+    <!--页头    start-->
+    <header>
+        <div id="logo">
+            <div id="header_img"><img src="images/whs.jpg" alt=""><h1>个人简历</h1></div>
+        </div>
+        <ul id="top-nav">
+            <li>
+                <div>
+                    <a href="index.html">首页</a>
+                    <a href="index.html">home</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="bootstap.html">博客</a>
+                    <a href="bootstap.html">blog</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="javascript:;">前端</a>
+                    <a href="javascript:;">web</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="javascript:;">日志</a>
+                    <a href="javascript:;">The log</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="javascript:;">关于</a>
+                    <a href="javascript:;">about</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!--页头       end  -->
+    <!--主体页面   start-->
+    <div id="dowebok">
+        <div class="section page1">
+            <h3><img src="images/whss.jpg" alt=""></h3>
+            <div class="iceberg">
+                <img src="images/bg81.png" alt="">
+            </div>
+            <div class="text">
+                <p>王瀚生</p>
+                <p>23 岁</p>
+                <p>电话：18372713469</p>
+                <p>邮箱：Dream_wshy@163.com</p>
+            </div>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+            <div class="bg3"></div>
+        </div>
+        <div class="section page2">
+            <h3>关于我 <p><span></span></p></h3>
+            <div class="imgs">
+                <img src="images/ww.png" alt="">
+            </div>
+            <!--<h3>我的作品demo</h3>
+            <a href="bootstap.html" class="dome">
+                <img src="images/gif3.gif" alt="">
+                <span>bootstrap布局</span>
+            </a>
+            <a href="hover.html" class="fp1">
+                <img src="images/gif2.gif" alt="">
+                <span>图片hover</span>
+            </a>
+            <a href="3Dhezi/view-source_index.html" class="fp2">
+                <img src="images/GIF.gif" alt="">
+                <span>3D滚动效果</span>
+            </a>
+            <p>喜欢干净的代码，代码强迫症晚期</p>
+            <p>Vue Angular React &nbsp; H5 &nbsp; jquery</p>
+            <p>各种新技术的不断涌现，使开发的页面更细致，更合理，更易维护。</p>-->
+            <div class="bg1"></div>
+            <!--<div class="bg2"></div>-->
+            <div class="bg3"></div>
+        </div>
+        <div class="section page3">
+            <h3>专业技能</h3>
+            <section class="hover1">
+                <div class="grid">
+                    <figure class="effect-sarah hover">
+                        <img src="img/2.jpg" alt="img04"/>
+                        <figcaption>
+                            <h2>HTML/css&nbsp;&nbsp;H5/C3</h2>
+                            <p>
+                                <span>精通HTML、CSS布局，熟练使用less</span><br>
+                                <span>熟练H5移动端开发，及flex rem布局、熟悉boostrap使用</span><br>
+                                <span>深刻理解Web标准,能快速采用div+css构建出页面</span><br>
+                            </p>
+                            <a href="javascript:;" target="_blank">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="hover2">
+                <div class="grid">
+                    <figure class="effect-sarah hover">
+                        <img src="img/15.jpg" alt="img15"/>
+                        <figcaption>
+                            <h2>js </h2>
+                            <p>
+                                <span>掌握js语言及ES6语法运用</span><br>
+                                <span>熟练运用Jquery/zopto库及ajax、post、jsonp交互</span><br>
+                                <span>了解gulp、webpack自动化构建工具运用</span><br>
+                            </p>
+                            <a href="javascript:;" target="_blank">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="hover3">
+                <div class="grid">
+                    <figure class="effect-sarah hover">
+                        <img src="img/13.jpg" alt="img13"/>
+                        <figcaption>
+                            <h2>框架</h2>
+                            <p>
+                                <span>熟练使用Vue.js框架</span><br>
+                                <span>熟悉angular、react框架使用</span><br>
+                                <span>了解后台nodeJS服务搭建，及mysql运用</span><br>
+                            </p>
+                            <a href="javascript:;" target="_blank">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+        <div class="section page4">
+            <h3>工作经历</h3>
+            <section class="hover1">
+                <div class="grid">
+                    <figure class="effect-romeo hover">
+                        <img src="img/2.jpg" alt="img14"/>
+                        <figcaption>
+                            <h2>北京梵宇悦川网络科技有限公司光</h2>
+                            <p>
+                                <span>工作时间：2016年10月-2017年04月</span><br>
+                                <span>在职职位：前端工程师</span><br>
+                                <span>工作职责：根据公司提供的设计图和产品需求文档快速还原设计图并完成js效果，根据后台提供的接口进行数据交互.</span><br>
+                            </p>
+                            <a href="javascript:;" target="_blank">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="hover2">
+                <div class="grid">
+                    <figure class="effect-romeo hover">
+                        <img src="img/1.jpg" alt="img14"/>
+                        <figcaption>
+                            <h2>云天星光数字技术有限公司</h2>
+                            <p>
+                                <span>工作时间：2015年09月-2016年10月</span><br>
+                                <span>在职职位：前端工程师</span><br>
+                                <span>工作职责：根据公司提供的设计图和产品需求文档快速还原设计图并完成js效果，根据后台提供的接口进行数据交互.</span><br>
+                            </p>
+                            <a href="javascript:;" target="_blank">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="hover3">
+                <div class="grid">
+                    <figure class="effect-sarah hover">
+                        <img src="img/w3.jpg" alt="img14"/>
+                        <figcaption>
+                            <h2>项目经验</h2>
+                            <p style="display:block">
+                                <span style="font-size:20px">云天星光官网</span><br>
+                                <span>项目时间：2016年03月-2016年09月</span><br>
+                                <span>项目描述：整个项目只有pc端。结构分为表现层、业务层、数据访问层、层次间依赖关系自下而上。</span><br>
+                                <span>项目地址：http://www.css-link.com </span><br><br>
+                                <span style="font-size:20px">瞧一瞧防伪溯源系统</span><br>
+                                <span>项目时间：2016年05月-2016年10月</span><br>
+                                <span>项目简介： 整个项目分为pc端微信端，使用的系统管理后台。用户主要分为两大类用户：消费者、商家。针对两类用户实现的功能： 消费者—扫码、查看商家、领取红包、选择不同的游戏模式，代金卷消费，积分商城 。 商家—发布产品、维护产品信息、维护用户信息、系统维护。  </span><br>
+                            </p>
+                            <a href="javascript:;" target="_blank">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+        <div class="section page5">
+            <h3>我的作品demo</h3>
+            <a href="bootstap.html" class="dome">
+                <img src="images/gif3.gif" alt="">
+                <span>bootstrap布局</span>
+            </a>
+            <a href="hover.html" class="fp1">
+                <img src="images/gif2.gif" alt="">
+                <span>图片hover</span>
+            </a>
+            <a href="3Dhezi/view-source_index.html" class="fp2">
+                <img src="images/GIF.gif" alt="">
+                <span>3D滚动效果</span>
+            </a>
+            <p>喜欢干净的代码，代码强迫症晚期</p>
+            <p>Vue Angular React &nbsp; H5 &nbsp; jquery</p>
+            <p>各种新技术的不断涌现，使开发的页面更细致，更合理，更易维护。</p>
+            <div class="bg1"></div>
+            <!--<div class="bg2"></div>-->
+            <div class="bg3"></div>
+        </div>
+        <div class="section page6">
+            <div class="author"><a href="index.html"><img src="images/whs.jpg" alt=""></a></div>
+            <div class="contactMe">
+                <div>
+                    <h2><a href="javascript:;">联系我</a></h2>
+                    <h2><a href="javascript:;">To contact me</a></h2>
+                </div>
+            </div>
+            <h3><span></span></h3>
+
+            <div class="toContactMe">
+                <span>Email: Dream_wshy@163.com </span><br>
+                <span>Cell-phone number: 18372713469</span>
+            </div>
+            <p class="Dream">Dream personal website</p>
+            <div class="footer">
+                <p><a href="javascript:;">CSDN </a> | <a href="javascript:;"> 简书 </a> | <a href="javascript:;"> 知乎 </a> | <a href="javascript:;"> Github</a></p>
+                <p> All Rights Reserved </p>
+                <p> Copyright © 2015 - 2016</p>
+            </div>
+        </div>
     </div>
-</div>
+    <!--主体页面   end  -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <!--<script src="-js/jquery.easings.min.js"></script>
+    <script src="-http://libs.baidu.com/jqueryui/1.8.22/jquery-ui.min.js "></script>-->
+    <script src="js/index.js"></script>
 </body>
 </html>
