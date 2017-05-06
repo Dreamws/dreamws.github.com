@@ -9,7 +9,7 @@ $(function(){
         resize: true,
         anchors: ["page1","page2","page3","page4","page5","page6"],
         navigationPosition:'right',
-        navigationTooltips:["首页","博客","旅行","日志","关于我","联系我"],
+        navigationTooltips:["首页","关于我","专业技能","工作经历","我的作品","联系我"],
         verticalCentered: false,
         afterRender:function(){
             $('.page1').addClass('active');
@@ -41,6 +41,18 @@ $(function(){
                 });
                 $('.page1 .text p').eq(0).css({
                     transform:'scale(1,1)'
+                })
+                $('.page1 .text p').eq(0).css({
+                    WebkitTransform:'scale(1,1)'
+                })
+                $('.page1 .text p').eq(1).css({
+                    WebkitTransform:'scale(1,1)'
+                })
+                $('.page1 .text p').eq(2).css({
+                    WebkitTransform:'scale(1,1)'
+                })
+                $('.page1 .text p').eq(3).css({
+                    WebkitTransform:'scale(1,1)'
                 })
             }
             if(index==2){
@@ -140,6 +152,18 @@ $(function(){
                 $('.page1 .text p').eq(1).animate({
                     transform:'scale(1,1)'
                 },400)
+                $('.page1 .text p').eq(0).css({
+                    WebkitTransform:'scale(0,0)'
+                })
+                $('.page1 .text p').eq(1).css({
+                    WebkitTransform:'scale(0,0)'
+                })
+                $('.page1 .text p').eq(2).css({
+                    WebkitTransform:'scale(0,0)'
+                })
+                $('.page1 .text p').eq(3).css({
+                    WebkitTransform:'scale(0,0)'
+                })
             }
             if(index==2){
                 $('.page2').removeClass('active2');
