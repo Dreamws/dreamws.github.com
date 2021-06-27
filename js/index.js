@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/4/23.
  */
 $(function(){
+    /*   fullPage  滚屏     */
     $('#dowebok').fullpage({
         'navigation': true,
         scrollingSpeed: 1000,
@@ -28,8 +29,8 @@ $(function(){
             $('.page1 .text p').eq(3).css({
                 WebkitTransform:'scale(1,1)'
             })
-        },
-        afterLoad (anchorLink,index) {
+        },/*     滚屏的回调函数，第一屏得放在这个     */
+        afterLoad:function (anchorLink,index) {
             if(index==1){
                 $('.page1').addClass('active');
                 /*$('.page1').find('h3').animate({
@@ -143,7 +144,7 @@ $(function(){
                 $('.page6 .footer p').eq(2).css('marginRight',0);
             }
         },
-        onLeave (index,nextIndex,direction){
+        onLeave:function (index,nextIndex,direction){
             if(index==1){
                 $('.page1').removeClass('.active');
                 $('.page1').find('h3').animate({
@@ -459,5 +460,4 @@ $(function(){
             };
         }
     }
-
 });
