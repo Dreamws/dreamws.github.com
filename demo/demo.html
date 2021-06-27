@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5+原生javascript 卡片扑克旋转展开效果demo</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{background:#ccc;padding-top:100px;}
+        button{height:40px;width:120px;font-size:15px;}
+        .box{width:300px;height:300px;margin:50px auto;}
+        .box ul{
+            position:relative;
+            height:300px;
+            width:200px;
+            margin:50px auto;
+            padding:0;
+            margin:0;
+        }
+        .box ul li{
+            position:absolute;
+            top:0;
+            left:0;
+            list-style: none;
+            height:200px;
+            width:100px;
+            background:#fff;
+            border-radius:5px;
+            box-shadow: 0 0 5px #eee;
+            font-size:16px;
+            color:#fff;
+        }
+
+    </style>
+    <script src="https://game-resource.uu.cc/hy.uu.cc/js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            ~(function(cssclass,time){
+
+                var item = document.querySelectorAll(cssclass);
+                var colorArr = ["red","blue","pink","yellow","blue","green","oringe","#7A1786","#861736","#848617","#9A6C27","#9A276C","red","blue","pink","yellow","blue","green","oringe","#7A1786","#861736","#848617","#9A6C27","#9A276C"];    //颜色数组
+
+                //正向旋转
+                document.querySelector(".clockwise").onclick = function(){
+                    var deg = 0;    //初始化旋转角度
+                    var rotateDeg = (360/item.length);  //变化角度
+                    for(var i = 0; i < item.length; i++){
+                        item[i].style.backgroundColor = colorArr[i];    //设置颜色值
+                        item[i].style.webkitTransform = "scale(" + ((i*0.01)+1)+") rotate(" + deg +"deg) translateX(" + (i*10) + "px)";
+                        //item[i].style.webkitTransform = "rotate(" + deg +"deg)";
+                        item[i].style.transition = "all "+ time + "s ease-out ";
+                        deg += rotateDeg;  //递增角度
+                    }
+                }
+
+                //逆向旋转
+                document.querySelector(".anticlockwise").onclick = function(){
+                    for(var i = item.length-1; i > 0; i--){
+                        item[i].style.backgroundColor = "#fff";
+                        item[i].style.webkitTransform = "rotate(0deg)"+"scale(1)";
+                        item[i].style.transition = "all "+ time + "s ease-out ";
+                    }
+                }
+
+            })(".movebox li", 3);
+
+        });
+    </script>
+</head>
+
+<body>
+    <button class="clockwise">顺时针选装</button>
+    <button class="anticlockwise">逆时针选装</button>
+    <div class="box">
+        <ul class="movebox">
+           <li>1</li>
+           <li>2</li>
+           <li>3</li>
+           <li>4</li>
+           <li>5</li>
+           <li>6</li>
+           <li>7</li>
+           <li>8</li>
+           <li>9</li>
+           <li>10</li>
+           <li>11</li>
+           <li>12</li>
+           <li>13</li>
+           <li>14</li>
+           <li>15</li>
+           <li>16</li>
+           <li>17</li>
+           <li>18</li>
+           <li>19</li>
+           <li>20</li>
+           <li>21</li>
+           <li>22</li>
+           <li>23</li>
+           <li>24</li>
+        </ul>
+    </div>
+    <a href="https://www.gov.cn/zhuanti/shisiwu/chrome/data/texts/content_6.json" download="true">66666</a>
+</body>
+</html>

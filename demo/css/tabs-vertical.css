@@ -1,0 +1,438 @@
+@font-face {
+    font-family: "STSong";
+    src: url("./STSong.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "STSong-Bold";
+  src: url("./STSong-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "STSong-Regular";
+  src: url("./STSong-Regular.ttf") format("truetype");
+}
+
+.tabs-vertical{
+    font-size: 13px;
+    font-family: STSong-Regular;
+    /* background-color: #f7f7f7; */
+    /* box-shadow: 0 0 22px #E2E2E2 inset, 2px 2px 3px #E8E8E8; */
+    /* border: 1px solid #CECECE; */
+    position:relative;
+    margin: 30px auto;
+    width: 55%;
+    text-align: center;
+    border-radius: 4px;
+    height: 90%;
+}
+
+@media (min-width: 1500px) { 
+    .tabs-vertical{
+        width: 965px;
+    }
+}
+
+
+@media (max-width: 900px) { 
+    .tabs-vertical{
+        width: 60%;
+    }
+}
+
+.tabs-vertical .font-size-name{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #FAFAF4;
+    right: -10%;
+    top: 0%;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "STSong-Regular";
+    font-size: 20px;
+    color: #333333;
+    letter-spacing: 0.33px;
+    line-height: 60px;
+}
+
+.tabs-vertical .font-size-name.big{
+    top: 80px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.tabs-vertical .font-size-name.normal{
+    top: 160px;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    margin: 0 4px;
+    font-size: 26px;
+    font-weight: 600;
+}
+.tabs-vertical .font-size-name.small{
+    top: 230px;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 7px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tabs-vertical .font-size-name.selected{
+    color: #2392A9;
+}
+
+
+.tabs-vertical .tabs-dom-first{
+    position: absolute;
+    width: 64px;
+    height: 80px;
+    background: #FAFAF4;
+    box-shadow: inset 0 -1px 0 0 #cccccc;
+    border-radius: 6px 0px 0px 0px;
+    border-right: 1px solid #CCC;
+}
+
+.tabs-vertical .tabs-dom-first img{
+    margin-top: 16px;
+}
+
+.tabs-vertical .tabs-dom-first div{
+    color:#333;
+    font-family: "STSong-Regular";
+    font-weight: bold;
+    font-size:14px
+}
+
+
+/* The tabs */
+
+.tabs-vertical ul{
+    float: left;
+    list-style: none;
+    text-align: left;
+
+    margin: 80px 0 0 0;
+    padding-left: 0;
+}
+
+.tabs-vertical ul li{
+    /* margin-right: -1px; */
+    display: block;
+}
+
+.tabs-vertical ul li a {
+    box-shadow: inset -20px 0px 10px -15px #ccc;
+}
+
+.tabs-vertical .tabs-dom-left-bottom{
+    margin: -1px 0px 0 5px;
+    height: 10px;
+    width: 59px;
+    background: url("../images/leftmenu.svg") 0% 0% / 100% 100% no-repeat;
+    box-shadow: inset -20px 0px 10px -15px #ccc;
+}
+
+.tabs-vertical ul li a.isfirst {
+    border-top-left-radius: 0px;
+}
+.tabs-vertical ul li a{
+    display: block;
+    text-decoration: none;
+    width: 64px;
+    font-family: "STSong-Regular";
+    color: #333333;
+    /* letter-spacing: 0; */
+    font-weight: normal;
+    background-color: #FAFAF4;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    padding: 16px 24px;
+    line-height: 20px;
+    font-size: 18px;
+}
+
+@media (max-width: 900px) { 
+    .tabs-vertical ul li a{
+        padding: 6px 24px;
+        font-size: 18px;
+        line-height: 17px;
+    }
+}
+
+.tabs-vertical ul li a.tab-active {
+    /* border-color: #dddddd; */
+    /* background-color: #ffffff; */
+    /* color: #2392A9; */
+    font-weight: bold;
+}
+
+.tabs-vertical ul li:first-child a{
+    border-top: 0;
+}
+
+/* The content */
+
+
+.tabs-vertical .share_icon{
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    height: 40px;
+    line-height: 40px;
+    width: 84px;
+    background:url("../images/share.png") 10px center no-repeat;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.tabs-vertical .share_icon.share_icon_mobile{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -100px;
+    top: 0px;
+    background:url();
+    background-color: #FAFAF4;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    padding-left: 0px;
+}
+
+.tabs-vertical .share_icon.share_icon_mobile img{
+    padding-top: 15px;
+}
+
+.tabs-vertical .share_icon.share_icon_mobile section{
+    line-height: 15px;
+}
+
+.tabs-vertical .tabs-content-placeholder{
+    font-weight: normal;
+    background-color: #FAFAF4;
+    padding: 0px 0px 45px 0px;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    /* background: url(../images/background.png); */
+    margin-left: 64px;
+    border-radius: 0 12px 12px 12px;
+}
+
+.tabs-vertical .tabs-content-placeholder div{
+    display: none;
+    height: 100%;
+}
+
+.tabs-vertical .tabs-content-placeholder div.tab-content-active{
+    display: block;
+}
+
+.tabs-vertical .tabs-content-placeholder div p{
+    color: #565a5c;
+    line-height: 1.5;
+    text-align: left;
+
+    margin: 5px 0 20px;
+}
+
+.tabs-vertical .tabs-content-placeholder div img{
+    max-width: 100%;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-first{
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    font-family: STSong-Regular;
+    font-size: 23px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    margin: 0px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) { 
+  .tabs-vertical .tabs-content-placeholder .tabs-dom-content-first{
+    font-size: 22px;
+  }
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-text{
+    margin: 0 20px 0 25px;
+    font-family: "STSong-Regular";
+    display: inline-block;
+    color: #333333;
+    letter-spacing: 0.5px;
+    font-size: 24px;
+    line-height: 48px;
+    text-indent:2em;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-text.small{
+    font-size: 20px;
+    display: block;
+    line-height: 40px;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-text.big{
+    display: block;
+    font-size: 30px;
+    line-height: 62px;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-title{
+    font-family: "STSong-Regular";
+    letter-spacing: 0;
+    color: #333333;
+    margin: 0 20px 0 25px;
+    font-size: 26px;
+    line-height: 48px;
+    text-align: left;
+    text-indent:2em;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-title.small{
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-title.big{
+    font-size: 30px;
+    line-height: 62px;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-img {
+    margin: 0 20px 0 25px;
+    font-family: "STSong-Regular";
+    color: #333333;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-img .tabs-dom-content-img-img{
+    margin: 0;
+    text-align: center;
+    font-size:0;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-img .tabs-dom-content-img-text{
+    margin: 0;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-img .tabs-dom-content-img-text.small{
+    font-size: 20px;
+    line-height: 40px;
+}
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-img .tabs-dom-content-img-text.big{
+    font-size: 30px;
+    line-height: 62px;
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-inner{
+    margin: 15px 0;
+    overflow-y: scroll;
+    max-height: 90%; 
+}
+
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-inner::-webkit-scrollbar-track-piece{background-color: rgba(0,0,0,0); border-left: 1px solid rgba(0,0,0,0);}
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-inner::-webkit-scrollbar{width: 5px; -webkit-border-radius:5px; -moz-border-radius: 5px; border-radius: 5px;}
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-inner::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,0.5); background-clip: padding-box; -webkit-border-radius:5px; -moz-border-radius: 5px; border-radius: 5px; min-height: 28px;}
+.tabs-vertical .tabs-content-placeholder .tabs-dom-content-inner::-webkit-scrollbar-thumb:hover{background-color: rgba(0,0,0,0.5); -webkit-border-radius:5px; -moz-border-radius: 5px; border-radius: 5px;}
+
+@media (max-width: 900px) {
+    .tabs-vertical .font-size-name{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: #FAFAF4;
+        right: -10%;
+        top: 0%;
+        border-radius: 50%;
+        cursor: pointer;
+        font-family: "STSong-Regular";
+        font-size: 20px;
+        color: #333333;
+        letter-spacing: 0.33px;
+        line-height: 50px;
+    }
+    
+    .tabs-vertical .font-size-name.big{
+       top: 60px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 28px;
+    }
+    .tabs-vertical .font-size-name.normal{
+        top: 118px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        margin: 4px;
+        font-size: 24px;
+    }
+    .tabs-vertical .font-size-name.small{
+        top: 176px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        margin: 0 7px;
+        font-size: 18px;
+    }
+}
+
+
+
+/* @media (max-width: 600px) {
+
+    .tabs-vertical ul{
+        float: none;
+    }
+
+    .tabs-vertical ul li{
+        display: inline-block;
+        margin-bottom: -1px;
+    }
+
+    .tabs-vertical ul li a{
+        border: 1px solid transparent;
+        border-bottom: 0;
+        border-top: 0;
+        padding: 12px 15px;
+    }
+
+    .tabs-vertical ul li a.tab-active {
+        border-color: #dddddd;
+        background-color: #ffffff;
+        box-shadow: 2px 0px 0px #EFEFEF;
+    }
+
+    .tabs-vertical ul li:first-child a{
+        border-left: 0;
+    }
+
+    .tabs-vertical .tabs-content-placeholder{
+        padding: 15px 30px 30px;
+        border-left: 0;
+        border-top: 1px solid #dddddd;
+        box-shadow: 0px -3px 0px #F3F3F3;
+    }
+
+} */

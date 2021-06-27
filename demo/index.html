@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="alternate" media="handheld" href="#"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="theme-color" content="#ffffff">
+  <title>10张色彩卡，滑动开启“黄浦江沿岸地区建设规划！”</title>
+  <meta name="Keywords" content="“黄浦江”建设规划、沿岸地区"/>
+  <meta name="Description" content="黄浦江沿岸地区建设规划！选择想浏览的篇章，一起阅读吧。"/>
+  <link rel="icon" href="http://www.gov.cn/zhuanti/shisiwu/chrome/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://www.gov.cn/zhuanti/shisiwu/chrome/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="./css/minify.css">
+  <link rel="stylesheet" type="text/css" href="./css/demo.css">
+  <link rel="stylesheet" type="text/css" href="./css/tabs-vertical.css">
+  <style>
+    #container{ background-color: #b0d8c8; }  /* 页面背景 */
+    #pantone h3{ font-size: 32px;letter-spacing: 2px;color:#28a98a;position: absolute;left:60px;top:50px; }
+    #pantone .arrow-r{ width:76px;height: 76px;background: url('./images/arrow-r.jpg') no-repeat;position: absolute;right:50px;top:50px;cursor: pointer; }
+  </style>
+  <noscript>
+    Javascript has been disabled!
+    <meta http-equiv="refresh" content="0;url=error.html" />
+  </noscript>
+</head>
+
+<body>
+  <p style="font-family: STSong-Regular;"></p>
+  <div id="preloader"></div>
+  <div id="block"></div>
+
+  <div id="root">
+    <div id="container">
+      <div id="about">
+        <div id="about-right" class="right-pos white">
+          <div id="about-close-bt" class="buttons close-pos"></div>
+        </div>
+
+        <div id="about-contents">
+          <h1 class="about-class">左右拖拽可浏览所有卡片</h1>
+          <h1 class="about-class">这里有一份“十四五”规划和2035年远景目标纲要全文</h1>
+          <h1 class="about-class"><span style="color:#9ACAFF">左右拖拽选择你想浏览的篇章，</span>一起阅读吧</h1>
+          <p class="about-class">
+            <img class="about-class" id="about-id-img" src="./images/hand1.gif" />
+            <!-- <div class="class-press">我知道了</div> -->
+          <p class="about-class" id="about-id-text">
+            中华人民共和国国民经济和社会发展第十四个五年（2021－2025年）规划和2035年远景目标纲要，根据《中共中央关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议》编制，主要阐明国家战略意图，明确政府工作重点，引导规范市场主体行为，是我国开启全面建设社会主义现代化国家新征程的宏伟蓝图，是全国各族人民共同的行动纲领。
+          </p>
+          </p>
+          <h2>
+          </h2>
+          <p>
+          </p>
+          <span class="copyright">
+            <!-- Copyright © 2013-2018 Jongmin Kim. All rights reserved. -->
+          </span>
+
+          <div class="press">
+          </div>
+        </div>
+      </div>
+      <div id="pantone" class="chand">
+        <div id="pantone-loading"></div>
+        <h3>黄浦江沿岸地区建设规划</h3>
+        <a href="javascript:;" class="arrow-r"></a>
+      </div>
+
+      <div id="contents">
+        <div id="detail-con">
+          <div id="mask"></div>
+          <div id="poster-con">
+            <div id="poster-big"></div>
+          </div>
+        </div>
+        <div id="load-con"></div>
+      </div>
+
+      <!-- 遮罩层 -->
+      <div id="sharebox" class="sharebox" style="display: none">
+        <div class="qrcodebox"><span id="closearcodebox"></span><img class="qrcode" src="./images/qrcode.jpg">
+          <p>扫描二维码分享给好友</p>
+          <p>一起来“悦”读“十四五”吧~</p>
+        </div>
+      </div>
+
+      <div id="footer" class="footer-black" style="margin-left: -130px;bottom:10px;"></div>
+    </div>
+  </div>
+
+  <div id="check"></div>
+
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    // 滚动卡片跳链地址
+    var hrefArr = [
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_1',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_2',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_3',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_4',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_5',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_6',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_7',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_8',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_9',
+      'https://www.gov.cn/zhuanti/shisiwu/chrome/index.html#!/section/content_10',
+    ];
+    var loadingText = '准备好，卡片洗牌中.....';                                                      // loading加载文字
+    var pointer = '<div><img style="width:260px;" src="./images/hand1.gif" alt="..."></div>';       // 小手
+    var setHref = function(val){                                                                    // 跳链函数
+      window.location.href = hrefArr[val];
+      console.log('我是：'+val);
+    }
+
+
+    var ProgressBar = {
+      maxValue: 1000,
+      value: 10,
+      SetValue: function (aValue) {
+        this.value = aValue;
+        if (this.value >= this.maxValue) this.value = this.maxValue;
+        if (this.value <= 0) this.value = 0;
+        var mWidth = this.value / this.maxValue * $("#progressBar").width() + "px";
+        $("#progressBar_Track").css("width", mWidth);
+        $("#progressBarTxt").html(this.value + "/" + this.maxValue);
+      }
+    }
+    function pd(ev) {
+      ev.preventDefault();
+    }
+
+    function orient() {
+      var width = document.documentElement.clientWidth;
+      var height = document.documentElement.clientHeight;
+      if (width < height) {
+        console.log(width + " " + height);
+        $root = $('#root');
+        $root.width(height);
+        $root.height(width);
+        $root.css('top', (height - width) / 2);
+        $root.css('left', 0 - (height - width) / 2);
+        $root.css('transform', 'rotate(90deg)');
+        $root.css('transform-origin', '50% 50%');
+
+        window.orientationMy = 'portrait';
+      } else {
+        window.orientationMy = 'landscape'
+      }
+    }
+    $(function () {
+      orient();
+    });
+
+    $(window).bind('orientationchange', function (e) {
+      window.location.reload()
+    });
+
+    $('document').ready(function () {
+      //设置进度条最大值
+      ProgressBar.maxValue = 100;
+      // 绑定 取消关闭
+      $(".class-press").click(function () {
+        try {
+          $("#about-close-bt").click();
+        } catch (e) {
+        }
+      });
+      $("#about-id-img").click(function () {
+        try {
+          $("#about-close-bt").click();
+        } catch (e) {
+        }
+      });
+      // 绑定 分享相关
+      $("#closearcodebox").click(function () {
+        $("#sharebox").hide()
+      });
+      $("#sharebox").click(function (event) {
+        if (event.target.id == 'sharebox') {
+          $("#sharebox").hide()
+        }
+      });
+      $("#sharebox-mobile").click(function (event) {
+        $("#sharebox-mobile").hide()
+      });
+      // 动画逻辑
+      Address.init("tablet")
+    });
+  </script>
+  <script type="text/javascript">
+      (function(){var N=100;var P=0.9;var R=N*P;var X=Math.floor(Math.random()*N);if(R>=X){_atrk_opts={atrk_acct:"noGfn1aMp4107i",domain:"www.gov.cn",dynamic:true};(function(){var as=document.createElement("script");as.type="text/javascript";as.async=true;as.src="./js/atrk.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(as,s)})()}})();
+  </script>
+  <script src="./js/minify.js?id=12"></script>
+</body>
+
+</html>
